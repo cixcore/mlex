@@ -93,6 +93,7 @@ public class Indice extends FileHandler
 		return(categoriasDoJogo.charAt(posicao) == '1');
 	}
 	
+	
 	public int getNumeroJogos()
 	{
 		 return indiceLocal.size();
@@ -125,6 +126,19 @@ public class Indice extends FileHandler
 				mapaJogoCategorias.replace(key, novaListaCategorias);
 			}
 		}
+	}
+	
+	public int getIdPorNome(String nomeDoJogo) {
+		int id = -1;
+		
+		for (Integer key : indiceLocal.keySet())
+		{
+			if (indiceLocal.getInformacoesJogoNoIndice(key).get(1) == nomeDoJogo)
+			{
+				id = key;
+			}
+		}
+		return id;
 	}
 	
 	public List<String> getListaCategorias()
@@ -205,6 +219,8 @@ public class Indice extends FileHandler
 	{
 		
 	}
-	
+
+
+	}
 	
 }
