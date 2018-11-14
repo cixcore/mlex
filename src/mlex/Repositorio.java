@@ -11,6 +11,7 @@ public class Repositorio extends FileHandler
 	private static Map<String, Integer> tabelaJogos = new HashMap<String, Integer>();
 	private java.io.Console cnsl = System.console();
 	private static Indice indice =  new Indice();
+	private static int ultimoidUtilizado = 0;
 	
 	public boolean verificaId(String nomeJogo)
 	{
@@ -25,7 +26,7 @@ public class Repositorio extends FileHandler
 		}
 		else
 		{
-			return 1; //verifica arquivo pelo ultimo id usado
+			return ultimoidUtilizado; //verifica arquivo pelo ultimo id usado
 		}
 	}
 	
