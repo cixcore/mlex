@@ -28,3 +28,6 @@ Mlex-img/
 bin/
 etc/
 .recommenders/
+.mlex.conf
+src/mlex/MyMlex.java
+src/mlex/RedirecionadorConsole.java
